@@ -1,2 +1,6 @@
 # Comparison-between-ADP--and-MIP--HEMS
-Run gamsplot.m for GAMS
+FOR GAMS_HEMS_test
+**************************************************************
+Change path in HEMS.gms to your own path
+Run gamsplot.m
+*****************************************************************
