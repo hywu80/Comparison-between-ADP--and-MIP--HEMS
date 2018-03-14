@@ -1,0 +1,237 @@
+clear;
+GAMSPATH='C:\GAMS\win64\24.7';
+addpath(GAMSPATH); % add GAMS foler to search path
+HEMSPATH = 'D:\PSOC\LWang\GAMS_HEMS_test\HEMS.gms';
+IO_DIRECTORY=('D:\PSOC\LWang\GAMS_HEMS_test');
+
+EV = '1_Static\EV_PAR.csv';
+HVAC = '1_Static\HVAC_PAR.csv';
+WH = '1_Static\WATER_HEATER_PAR.csv';
+OUTTEMP = '3_from_input_file\TS_OUTDOOR_TEMP.csv';
+HOTWATER = '3_from_input_file\TS_HOTWATER_USAGE.csv';
+LOAD = '2_from_GLD\TS_NONCONTROL_LOAD.csv';
+PRICE = '2_from_GLD\TS_ELEC_PRICE.csv';
+
+medi_store = load('lambdas_36_midn.mat');
+medi_store = medi_store.medi_store;
+price_store = load('price_36_midn.mat');
+price_store = price_store.price_store;
+n_period = 24;
+time_slot = 12;
+arrive_time =18;
+departure_time = 9;
+post_decision =ones(n_period,3);
+pre_decision = ones(n_period+1,3);
+pre_decision(1,:) = [77 110 0.48];
+%forecast = medi_store;
+forecast = medi_store + mod(randn(36,3),1);
+%forecast(:,1) = Generate_ARMA_Forecast_HEMS(medi_store(:,1),0.05,36);
+%forecast(:,2) = Generate_ARMA_Forecast_HEMS(medi_store(:,2),0.1,36);
+%forecast(:,3) = round(Generate_ARMA_Forecast_HEMS(medi_store(:,3),0.1,36));
+forecast(:,3) = forecast(:,3)-mod(forecast(:,3),4);
+forecast(:,2) = round(forecast(:,2));
+H_arrive_time = arrive_time+1;
+H_departure_time = departure_time+1;
+decision = zeros(n_period,3);
+for i = 1:n_period
+	medi = medi_store(i:i+time_slot-1,:);
+	price = price_store(:,i:i+time_slot-1);
+    H_arrive_time = H_arrive_time - 1;
+    H_departure_time = H_departure_time - 1;
+    if H_departure_time == 0
+        H_departure_time = 24;
+    end
+	ad_time = [H_arrive_time,H_departure_time];
+
+    %Change csv data, faster way, read once at the beginning.
+    [~,~,RAW] = xlsread(HVAC);
+    T = cell2table(RAW);
+    T{3,8} = num2cell(pre_decision(i,1));
+    writetable(T,HVAC,'WriteVariableNames',false);
+    
+    [~,~,RAW] = xlsread(WH);
+    T = cell2table(RAW);
+    T{2,9} = num2cell(pre_decision(i,2));
+    writetable(T,WH,'WriteVariableNames',false);
+    
+    [~,~,RAW] = xlsread(EV);
+    T = cell2table(RAW);
+    T{2,[9,10]}= num2cell(ad_time);
+    T{2,11} = num2cell(pre_decision(i,3)/100);
+    writetable(T,EV,'WriteVariableNames',false);
+    
+    [~,~,RAW] = xlsread(OUTTEMP);
+    T = cell2table(RAW);
+    T{3:14,5}= num2cell(medi(:,1));
+    writetable(T,OUTTEMP,'WriteVariableNames',false);
+    
+    [~,~,RAW] = xlsread(HOTWATER);
+    T = cell2table(RAW);
+    T{3:14,5}= num2cell(medi(:,2));
+    writetable(T,HOTWATER,'WriteVariableNames',false);
+    
+    [~,~,RAW] = xlsread(LOAD);
+    T = cell2table(RAW);
+    T{3:14,5}= num2cell(medi(:,3));
+    writetable(T,LOAD,'WriteVariableNames',false);
+    
+    [~,~,RAW] = xlsread(PRICE);
+    T = cell2table(RAW);
+    T{3:14,5}= num2cell(price');
+    writetable(T,PRICE,'WriteVariableNames',false);
+    
+    HEMS = [GAMSPATH,'\gams ',HEMSPATH,' lo=3'];
+    value = system(HEMS);
+    if value~=0
+        error("GAMS ERROR");
+    end
+    %read result
+    outputGDX=[IO_DIRECTORY,filesep,'Results.gdx'];
+    t_gdx.name = 't';
+    t=rgdx(outputGDX,t_gdx);
+    s_gdx.name ='s';
+    s=rgdx(outputGDX,s_gdx);
+    ss_gdx.name ='ss';
+    ss=rgdx(outputGDX,ss_gdx);
+    pHVAC_gdx.name = 'pHVAC';
+    pHVAC_gdx.form = 'full';
+    pHVAC_gdx.uels = {t.uels{1, 1}(1,t.val) ss.uels{1, 1}(1,ss.val)};
+    pHVAC=rgdx(outputGDX,pHVAC_gdx);
+    decision(i,1) = pHVAC.val(2)/(-5.3);
+    
+    nWH_gdx.name = 'nWH';
+    nWH=rgdx(outputGDX,nWH_gdx);
+    pWH_gdx.name = 'pWH';
+    pWH_gdx.form = 'full';
+    pWH_gdx.uels = {nWH.uels{1, 1}(1,nWH.val) t.uels{1, 1}(1,t.val) ss.uels{1, 1}(1,ss.val)};
+    pWH=rgdx(outputGDX,pWH_gdx);
+    decision(i,2) = pWH.val(2)/0.72;
+   
+    nEV_gdx.name = 'nEV';
+    nEV=rgdx(outputGDX,nEV_gdx);
+    EVCharRate_gdx.name ='EVCharRate';
+    EVCharRate_gdx.form = 'full';
+    EVCharRate_gdx.uels = {nEV.uels{1,1}(1,nEV.val) t.uels{1, 1}(1,t.val) ss.uels{1, 1}(1,ss.val)};
+    EVCharRate=rgdx(outputGDX,EVCharRate_gdx);
+    decision(i,3) = EVCharRate.val(2)/100;   
+    
+    
+    post_decision(i,:) = pre_decision(i,:)+decision(i,:);
+	pre_decision(i+1,1) = 0.9*post_decision(i,1)+ 0.1*forecast(i,1);
+	pre_decision(i+1,2) = 0.9986*post_decision(i,2)- 1.836*(forecast(i,2));
+
+   
+    if(i>arrive_time||i<departure_time)
+%       pre_decision(i+1,3)= post_decision(i,3)- forecast(i,3)/100;
+        pre_decision(i+1,3)= post_decision(i,3);
+    else
+        if i == arrive_time-1
+            pre_decision(i+1,3) = 0.56;
+        else
+             pre_decision(i+1,3) = post_decision(i,3);
+        end
+    end
+    
+end
+
+
+combined = ones(n_period*2+1,3);
+for n = 1:n_period
+	combined(2*n-1,:) = pre_decision(n,:);
+    combined(2*n,:) = post_decision(n,:);
+    x(2*n-1) = n;
+    x(2*n) = n+0.2;
+    x_r(n) = n+0.6;
+end
+combined(2*n_period+1,:) = pre_decision(n_period+1,:);
+x(2*n_period+1) = n_period+1;
+
+%%
+subplot(2,2,1)
+rectangle('Position',[14 0 6 0.5],'EdgeColor',[1 1 1],'FaceColor',[1,0,1]);
+hold on;
+rectangle('Position',[11 0 3 0.5],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+rectangle('Position',[20 0 2 0.5],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+plot(price_store(1,1:24),'DisplayName','Electricity Price')
+xlabel('Time(hr)');
+ylabel('Price ($/KWh)');
+xlim([1 24]);
+legend('show');
+
+subplot(2,2,2)
+yyaxis left
+rectangle('Position',[14 0 6 125],'EdgeColor',[1 1 1],'FaceColor',[1,0,1]);
+hold on;
+rectangle('Position',[11 0 3 125],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+rectangle('Position',[20 0 2 125],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+plot(x,combined(:,2),'black','DisplayName','Water Temperature','LineWidth',2);
+hold on;
+line1 = refline([0 113]);
+line1.LineStyle = '-.';
+line1.Color = 'g';
+line1.DisplayName = 'Desired Temperature';
+ylabel('Temperature (F)')
+ylim([100 125]);
+hold on;
+yyaxis right
+bar(x_r,forecast(1:24,2),'DisplayName','Water Usage');
+ylabel('Water Usage (Gallons per hour)');
+ylim([0 15]);
+xlabel('Time (hr)');
+legend('show');
+xlim([1 25]);
+
+
+subplot(2,2,3)
+yyaxis left
+rectangle('Position',[14 0 6 85],'EdgeColor',[1 1 1],'FaceColor',[1,0,1]);
+hold on;
+rectangle('Position',[11 0 3 85],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+rectangle('Position',[20 0 2 85],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+plot(x,combined(:,1),'black','DisplayName','Room Temperature','LineWidth',2);
+hold on;
+line2 = refline([0 75]);
+line2.LineStyle = '-.';
+line2.Color = 'g';
+line2.DisplayName = 'Desired Temperature';
+ylabel('Temperature(F)');
+ylim([60 85]);
+hold on;
+yyaxis right
+bar(x_r,forecast(1:24,1),'DisplayName','Outside Temperature');
+ylabel('Temperature(F)');
+ylim([75 120]);
+xlabel('Time(hr)');
+xlim([1 25]);
+legend('show');
+
+subplot(2,2,4)
+yyaxis left
+rectangle('Position',[14 0 6 100],'EdgeColor',[1 1 1],'FaceColor',[1,0,1]);
+hold on;
+rectangle('Position',[11 0 3 100],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+rectangle('Position',[20 0 2 100],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+plot(x,combined(:,3).*100,'black','DisplayName','EV Battery SOC','LineWidth',2);
+hold on;
+line3 = refline([0 92]);
+line3.LineStyle = '-.';
+line3.Color = 'g';
+line3.DisplayName = 'Desired SOC';
+ylabel('SOC');
+ylim([0 100]);
+hold on;
+yyaxis right
+bar(x_r-0.1,forecast(1:24,3),'DisplayName','Uncontrollable Load');
+ylabel('SOC');
+ylim([0 20]);
+xlabel('Time(hr)');
+xlim([1 25]);
+legend('show');

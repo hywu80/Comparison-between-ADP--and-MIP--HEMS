@@ -1,0 +1,138 @@
+clear;
+GAMSPATH='C:\GAMS\win64\24.7';
+addpath(GAMSPATH); % add GAMS foler to search path
+HEMSPATH = 'D:\PSOC\LWang\GAMS_HEMS_test\HEMS.gms';
+IO_DIRECTORY=('D:\PSOC\LWang\GAMS_HEMS_test');
+
+EV = '1_Static\EV_PAR.csv';
+HVAC = '1_Static\HVAC_PAR.csv';
+WH = '1_Static\WATER_HEATER_PAR.csv';
+OUTTEMP = '3_from_input_file\TS_OUTDOOR_TEMP.csv';
+HOTWATER = '3_from_input_file\TS_HOTWATER_USAGE.csv';
+LOAD = '2_from_GLD\TS_NONCONTROL_LOAD.csv';
+PRICE = '2_from_GLD\TS_ELEC_PRICE.csv';
+
+medi_store = load('lambdas_36_midn.mat');
+medi_store = medi_store.medi_store;
+price_store = load('price_36_midn.mat');
+price_store = price_store.price_store;
+n_period = 24;
+time_slot = 12;
+arrive_time =18;
+departure_time = 9;
+post_decision =ones(n_period,3);
+pre_decision = ones(n_period+1,3);
+pre_decision(1,:) = [77 110 0.48];
+%forecast = medi_store;
+forecast = medi_store + mod(randn(36,3),1);
+%forecast(:,1) = Generate_ARMA_Forecast_HEMS(medi_store(:,1),0.05,36);
+%forecast(:,2) = Generate_ARMA_Forecast_HEMS(medi_store(:,2),0.1,36);
+%forecast(:,3) = round(Generate_ARMA_Forecast_HEMS(medi_store(:,3),0.1,36));
+forecast(:,3) = forecast(:,3)-mod(forecast(:,3),4);
+forecast(:,2) = round(forecast(:,2));
+H_arrive_time = arrive_time+1;
+H_departure_time = departure_time+1;
+decision = zeros(n_period,3);
+for i = 1:n_period
+	medi = medi_store(i:i+time_slot-1,:);
+	price = price_store(:,i:i+time_slot-1);
+    H_arrive_time = H_arrive_time - 1;
+    H_departure_time = H_departure_time - 1;
+    if H_departure_time == 0
+        H_departure_time = 24;
+    end
+	ad_time = [H_arrive_time,H_departure_time];
+
+    %Change csv data, faster way, read once at the beginning.
+    [~,~,RAW] = xlsread(HVAC);
+    T = cell2table(RAW);
+    T{3,8} = num2cell(pre_decision(i,1));
+    writetable(T,HVAC,'WriteVariableNames',false);
+    
+    [~,~,RAW] = xlsread(WH);
+    T = cell2table(RAW);
+    T{2,9} = num2cell(pre_decision(i,2));
+    writetable(T,WH,'WriteVariableNames',false);
+    
+    [~,~,RAW] = xlsread(EV);
+    T = cell2table(RAW);
+    T{2,[9,10]}= num2cell(ad_time);
+    T{2,11} = num2cell(pre_decision(i,3)/100);
+    writetable(T,EV,'WriteVariableNames',false);
+    
+    [~,~,RAW] = xlsread(OUTTEMP);
+    T = cell2table(RAW);
+    T{3:14,5}= num2cell(medi(:,1));
+    writetable(T,OUTTEMP,'WriteVariableNames',false);
+    
+    [~,~,RAW] = xlsread(HOTWATER);
+    T = cell2table(RAW);
+    T{3:14,5}= num2cell(medi(:,2));
+    writetable(T,HOTWATER,'WriteVariableNames',false);
+    
+    [~,~,RAW] = xlsread(LOAD);
+    T = cell2table(RAW);
+    T{3:14,5}= num2cell(medi(:,3));
+    writetable(T,LOAD,'WriteVariableNames',false);
+    
+    [~,~,RAW] = xlsread(PRICE);
+    T = cell2table(RAW);
+    T{3:14,5}= num2cell(price');
+    writetable(T,PRICE,'WriteVariableNames',false);
+    
+    HEMS = [GAMSPATH,'\gams ',HEMSPATH,' lo=3'];
+    value = system(HEMS);
+    if value~=0
+        error("GAMS ERROR");
+    end
+    %read result
+    outputGDX=[IO_DIRECTORY,filesep,'Results.gdx'];
+    t_gdx.name = 't';
+    t=rgdx(outputGDX,t_gdx);
+    s_gdx.name ='s';
+    s=rgdx(outputGDX,s_gdx);
+    ss_gdx.name ='ss';
+    ss=rgdx(outputGDX,ss_gdx);
+    pHVAC_gdx.name = 'pHVAC';
+    pHVAC_gdx.form = 'full';
+    pHVAC_gdx.uels = {t.uels{1, 1}(1,t.val) ss.uels{1, 1}(1,ss.val)};
+    pHVAC=rgdx(outputGDX,pHVAC_gdx);
+    decision(i,1) = pHVAC.val(2)/(-5.3);
+    
+    nWH_gdx.name = 'nWH';
+    nWH=rgdx(outputGDX,nWH_gdx);
+    pWH_gdx.name = 'pWH';
+    pWH_gdx.form = 'full';
+    pWH_gdx.uels = {nWH.uels{1, 1}(1,nWH.val) t.uels{1, 1}(1,t.val) ss.uels{1, 1}(1,ss.val)};
+    pWH=rgdx(outputGDX,pWH_gdx);
+    decision(i,2) = pWH.val(2)/0.72;
+   
+    nEV_gdx.name = 'nEV';
+    nEV=rgdx(outputGDX,nEV_gdx);
+    EVCharRate_gdx.name ='EVCharRate';
+    EVCharRate_gdx.form = 'full';
+    EVCharRate_gdx.uels = {nEV.uels{1,1}(1,nEV.val) t.uels{1, 1}(1,t.val) ss.uels{1, 1}(1,ss.val)};
+    EVCharRate=rgdx(outputGDX,EVCharRate_gdx);
+    decision(i,3) = EVCharRate.val(2)/100;   
+    
+    
+    post_decision(i,:) = pre_decision(i,:)+decision(i,:);
+	pre_decision(i+1,1) = 0.9*post_decision(i,1)+ 0.1*forecast(i,1);
+	pre_decision(i+1,2) = 0.9986*post_decision(i,2)- 1.836*(forecast(i,2));
+
+   
+    if(i>arrive_time||i<departure_time)
+%       pre_decision(i+1,3)= post_decision(i,3)- forecast(i,3)/100;
+        pre_decision(i+1,3)= post_decision(i,3);
+    else
+        if i == arrive_time-1
+            pre_decision(i+1,3) = 0.56;
+        else
+             pre_decision(i+1,3) = post_decision(i,3);
+        end
+    end
+    
+end
+
+
+combined = ones(n_period*2+1,3);

@@ -1,0 +1,16 @@
+Input=D:\PSOC\LWang\GAMS_HEMS\HEMS.gms
+Output=D:\PSOC\LWang\GAMS_HEMS_test\HEMS.lst
+Action=R
+SubSys=C:\GAMS\win64\24.7\gmscmpnt.txt
+ScrDir=D:\PSOC\LWang\GAMS_HEMS_test\225a\
+SysDir=C:\GAMS\win64\24.7\
+CurDir=D:\PSOC\LWang\GAMS_HEMS_test\
+WorkDir=D:\PSOC\LWang\GAMS_HEMS_test\
+PutDir=D:\PSOC\LWang\GAMS_HEMS_test\
+GridDir=D:\PSOC\LWang\GAMS_HEMS_test\225a\
+ScriptNext=225a\gamsnext.cmd
+ScriptFrst="@echo off"
+LogOption=3
+AppendOut=1
+LibIncDir=C:\GAMS\win64\24.7\inclib\
+SysIncDir=C:\GAMS\win64\24.7\
