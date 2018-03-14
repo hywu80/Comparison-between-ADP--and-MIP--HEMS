@@ -1,4 +1,4 @@
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 13:22:38 Page 1
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 17:22:27 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -35,77 +35,77 @@ C o m p i l a t i o n
   33   
   34  * Read data in
   35   
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\HVAC_PAR.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\HVAC_PAR.gdx
 --- LOAD  hm = 1:HVACTable
 --- LOAD  HVACPar = 1:HVACTable
   40   
   41   
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\CONTROL_DEV.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\CONTROL_DEV.gdx
 --- LOAD  AppPar = 1:appTable
   46   
   47   
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\TS_ELEC_PRICE.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_ELEC_PRICE.gdx
 --- LOAD  t = 1:elecPriceTable
 --- LOAD  s = 1:elecPriceTable
 --- LOAD  EPrice = 1:elecPriceTable
   52   
   53   
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\TS_OUTDOOR_TEMP.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_OUTDOOR_TEMP.gdx
 --- LOAD  tempOut = 1:outDoorTempTable
   58   
   59  ************** added on 02-03-2015 ********************
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\TS_SOLAR_INSOLATION.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_SOLAR_INSOLATION.gdx
 --- LOAD  solarIns = 1:solarInsolationTable
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 13:22:38 Page 2
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 17:22:27 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
 
   64   
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\TS_INTERNAL_SOURCE.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_INTERNAL_SOURCE.gdx
 --- LOAD  interSource = 1:internalSourceTable
   69  ************** end on 02-03-2015 ********************
   70   
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\TS_DESIRED_TEMP.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_DESIRED_TEMP.gdx
 --- LOAD  desiredTEMP = 1:desiredTempTable
   75   
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\WATER_HEATER_PAR.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\WATER_HEATER_PAR.gdx
 --- LOAD  WHPar = 1:WHTable
 --- LOAD  nWH = 1:WHTable
   80   
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\TS_HOTWATER_USAGE.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_HOTWATER_USAGE.gdx
 --- LOAD  waterUsage = 1:waterUseTable
   85   
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\EV_PAR.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\EV_PAR.gdx
 --- LOAD  nEV = 1:EVTable
 --- LOAD  EVPar = 1:EVTable
   90   
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\STORAGE_PAR.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\STORAGE_PAR.gdx
 --- LOAD  nStorage = 1:storageTable
 --- LOAD  storPar = 1:storageTable
   95   
   96   
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\TS_WIND_GEN.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_WIND_GEN.gdx
 --- LOAD  windGen = 1:windGenTable
  101   
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\TS_SOLAR_GEN.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_SOLAR_GEN.gdx
 --- LOAD  solarGenf = 1:solarGenTable
  106   
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\TS_NONCONTROL_LOAD.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_NONCONTROL_LOAD.gdx
 --- LOAD  nonControlLoad = 1:nonControlLoadTable
  111   
  112   
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\OBJECTIVE.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\OBJECTIVE.gdx
 --- LOAD  nObj = 1:objTable
 --- LOAD  coObj = 1:objTable
  117   
  118   
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\PENALTY.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\PENALTY.gdx
 --- LOAD  penPar = 1:penTable
  123   
  124   
  125  * Change IntervalLength / SysTimePar if you run energy constraints
-GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\SYSTIME_PAR.gdx
+GDXIN   D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\SYSTIME_PAR.gdx
 --- LOAD  sysTimePar = 1:sysTimeTable
  130   
  131  *ss(s)=yes$(ord(s)>=1);
@@ -114,7 +114,7 @@ GDXIN   D:\PSOC\LWang\GAMS_HEMS_test\SYSTIME_PAR.gdx
  134   
  135  display waterUsage, tempOut, nEV,s,ss,t,Eprice,penPar;
  136   
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 13:22:38 Page 3
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 17:22:27 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -172,7 +172,7 @@ C o m p i l a t i o n
  203  parameter objWeight(nObj);
  204  objWeight(nObj)=coObj(nObj);
  205   
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 13:22:38 Page 4
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 17:22:27 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -230,7 +230,7 @@ C o m p i l a t i o n
  256  Parameter rmTempUB(t);
  257  *$IFI "%HEATPARUSE%"=="YES" rmTempUB(t)=desiredTEMP(t,'DESIRED_HEATING_TEMP_UB');
  258  rmTempUB(t)=desiredTEMP(t,'DESIRED_COOLING_TEMP_UB');
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 13:22:38 Page 5
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 17:22:27 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -288,7 +288,7 @@ C o m p i l a t i o n
  309  WHTempLB(t)=desiredTEMP(t,'DESIRED_WH_TEMP_LB');
  310   
  311  Parameter desiredWHTemp(t);
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 13:22:38 Page 6
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 17:22:27 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -346,7 +346,7 @@ C o m p i l a t i o n
  362  Parameter InitEVSOC(nEV);
  363  InitEVSOC(nEV)=EVPar(nEV,'INITIAL_SOC');
  364   
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 13:22:38 Page 7
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 17:22:27 Page 7
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -404,7 +404,7 @@ C o m p i l a t i o n
  415  minStorCharge(nStorage)=storPar(nStorage,'MIN_CHARGE');
  416  loop(nStorage,if(minStorCharge(nStorage)=0,minStorCharge(nStorage)=epsilon;););
  417   
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 13:22:38 Page 8
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 17:22:27 Page 8
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -462,7 +462,7 @@ C o m p i l a t i o n
  468  variable StorEnergyCost;
  469  variable PVEnergyCost;
  470  variable WindEnergyCost;
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 13:22:38 Page 9
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                 03/14/18 17:22:27 Page 9
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -520,7 +520,7 @@ C o m p i l a t i o n
  528  variable calPWH_HeatSP(nWH,t,s);
  529  positive variable s5(nWH,t,s);
  530  positive variable s6(nWH,t,s);
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 10
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 10
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -578,7 +578,7 @@ C o m p i l a t i o n
  588  positive variable storDischarNegDiff(nStorage,t,s);
  589   
  590  *********************************** end storage variables ********************************************************
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 11
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 11
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -636,7 +636,7 @@ C o m p i l a t i o n
  641  calRmTempNoCooling       calculate room temperature without cooling from HVAC
  642  calRmTempRatedCooling    calculate room temperature with full power from HVAC
  643  calPHVACSP1
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 12
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 12
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -694,7 +694,7 @@ C o m p i l a t i o n
  694  ubrmTemp1
  695  lbrmTemp1
  696  ;
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 13
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 13
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -752,7 +752,7 @@ C o m p i l a t i o n
  747  EVSOCdynamicEq2Discharge
  748  EVSOCdynamicEq1Idle
  749  EVSOCdynamicEq2Idle
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 14
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 14
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -810,7 +810,7 @@ C o m p i l a t i o n
  802  ;
  803   
  804  objDefDiscom..       discom =e= 0
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 15
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 15
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -868,7 +868,7 @@ C o m p i l a t i o n
  861  ************************   End of HVAC is OFF  *************************************
  862   
  863  ************************   HVAC is ON  *************************************
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 16
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 16
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -926,7 +926,7 @@ C o m p i l a t i o n
  909  * Pre_calculation
  910  calRmTempNoHeat(t,s)$(ord(t)>1 and ss(s))..  calRmTemp_noHeat(t,s)=e= coRmTemp('heating')*rmTemp(t-1,s)+coOutTemp('heating')*tempOut(t,s);
  911  calRmTempRatedHeat(t,s)$(ord(t)>1 and ss(s)).. calRmTemp_ratedHeat(t,s)=e=coRmTemp('heating')*rmTemp(t-1,s)+coPowerToTemp('heating')*ratedHVACPower('Heating')+coOutTemp('heating')*tempOut(t,s);
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 17
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 17
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -984,7 +984,7 @@ C o m p i l a t i o n
  965   
  966  ************************   WH is OFF  *************************************
  967  ubpWHOFF1(nWH,t,ss)$(ord(t)>1).. pWH(nWH,t,ss) =l= M*WHON(nWH,t);
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 18
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 18
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1042,7 +1042,7 @@ C o m p i l a t i o n
 1018   
 1019   
 1020  EVubChargeCon(nEV,t,ss)$(ord(t)>1)..   EVCharRate(nEV,t,ss) =l= maxEVCharge(nEV)*EVChargeState(nEV,t);
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 19
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 19
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1100,7 +1100,7 @@ C o m p i l a t i o n
 1069  parameter ubCarbFoot;
 1070  parameter ubPeakLoad;
 1071  parameter ubDiscom;
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 20
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 20
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1158,7 +1158,7 @@ C o m p i l a t i o n
 1122  HVACEnergyCostDef.. HVACEnergyCost =e=  sum((t,ss)$(ord(t)>1),sceProbability(ss)*EPrice(t,ss)*pHVAC(t,ss)*intervalLength);
 1123  WHEnergyCostDef.. WHEnergyCost =e= sum((nWH,t,ss)$(ord(t)>1),sceProbability(ss)*EPrice(t,ss)*pWH(nWH,t,ss)*intervalLength);
 1124   
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 21
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 21
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1216,7 +1216,7 @@ C o m p i l a t i o n
 1175  ancbin1WH
 1176  ancbin2WH
 1177  ancbin3WH
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 22
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 22
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1274,7 +1274,7 @@ C o m p i l a t i o n
 1230  binary variable f_WHON(nWH,t);
 1231  binary variable f_bbb1(nWH,t);
 1232  binary variable f_bbb2(nWH,t);
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 23
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 23
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1332,7 +1332,7 @@ C o m p i l a t i o n
 1283  f_extraCon2
 1284  ;
 1285   
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 24
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 24
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1390,7 +1390,7 @@ C o m p i l a t i o n
 1336  f_ancbin15WH
 1337  f_ancbin16WH
 1338  f_lbWHSetPoint1
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 25
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 25
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1448,7 +1448,7 @@ C o m p i l a t i o n
 1389  ************************   HVAC is ON  *************************************
 1390  f_ancON1(t)$(ord(t)>1)..  f_c(t)-1 =l= M*(1-f_ON(t));
 1391  f_ancON2(t)$(ord(t)>1)..  -f_c(t)+1 =l= M*(1-f_ON(t));
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 26
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 26
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1506,7 +1506,7 @@ C o m p i l a t i o n
 1439                                 =l=M*(1-f_h(t));
 1440  f_thermEqONHeat2(t,s)$(ord(t)>1 and ss(s)).. -rmTemp(t,s)+coRmTemp('heating')*rmTemp(t-1,s)+coPowerToTemp('heating')*pHVAC(t,s)+coOutTemp('heating')*tempOut(t,s)
 1442                                 =l=M*(1-f_h(t));
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 27
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 27
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1564,7 +1564,7 @@ C o m p i l a t i o n
 1493  f_ancbin6WH(nWH,t,ss)$(ord(t)>1)..  calWHTemp_noHeat(nWH,t,ss)-WHTempSP(nWH,t) =l= M*(1+f_bbb1(nWH,t)-f_WHON(nWH,t));
 1494  f_ancbin7WH(nWH,t,ss)$(ord(t)>1)..  ratedWHPower(nWH)-calPWH_HeatSP(nWH,t,ss) =l=M*(f_bbb1(nWH,t)+2-f_bbb2(nWH,t)-f_WHON(nWH,t));
 1495  f_ancbin8WH(nWH,t,ss)$(ord(t)>1)..  pWH(nWH,t,ss)-ratedWHPower(nWH) =l= M*(f_bbb1(nWH,t)+2-f_bbb2(nWH,t)-f_WHON(nWH,t));
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 28
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 28
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1622,7 +1622,7 @@ C o m p i l a t i o n
 1546  SPTOUB1
 1547  SPTOUB2
 1548  SPTOUB3
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 29
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 29
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1680,7 +1680,7 @@ C o m p i l a t i o n
 1600   
 1601   
 1602   
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 30
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 30
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1738,7 +1738,7 @@ C o m p i l a t i o n
 1662  SPTOLB2
 1663  SPTOLB3
 1664  SPTOLB4
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 31
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 31
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1796,7 +1796,7 @@ C o m p i l a t i o n
 1741  SHEMS_overall.ResLim=300;
 1742   
 1743   
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 32
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 32
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1852,52 +1852,52 @@ C o m p i l a t i o n
 **** STRAY NAME lightingPar OF TYPE PARAM
 **** STRAY NAME tsLighting OF TYPE PARAM
 **** STRAY NAME CHPPar OF TYPE PARAM
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 33
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 33
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
 
    SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
 
-     1        1 INPUT          0       0  D:\PSOC\LWang\GAMS_HEMS_test\HEMS.gms
-     2       36 CALL           1      36  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\1_Static\HVAC_PAR id=HVACTable index=1 values=2..10 useheader=y StoreZero=y
-     3       37 GDXIN          1      37  D:\PSOC\LWang\GAMS_HEMS_test\HVAC_PAR.gdx
-     4       42 CALL           1      42  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\1_Static\CONTROL_DEV id=appTable index=1 values=2 useheader=y StoreZero=y
-     5       43 GDXIN          1      43  D:\PSOC\LWang\GAMS_HEMS_test\CONTROL_DEV.gdx
-     6       48 CALL           1      48  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\2_from_GLD\TS_ELEC_PRICE id=elecPriceTable index=1 values=5..56 useheader=y StoreZero=y
-     7       49 GDXIN          1      49  D:\PSOC\LWang\GAMS_HEMS_test\TS_ELEC_PRICE.gdx
-     8       54 CALL           1      54  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\3_from_input_file\TS_OUTDOOR_TEMP id=outDoorTempTable index=1 values=5..56 useheader=y StoreZero=y
-     9       55 GDXIN          1      55  D:\PSOC\LWang\GAMS_HEMS_test\TS_OUTDOOR_TEMP.gdx
-    10       60 CALL           1      60  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\3_from_input_file\TS_SOLAR_INSOLATION id=solarInsolationTable index=1 values=5..56 useheader=y StoreZero=y
-    11       61 GDXIN          1      61  D:\PSOC\LWang\GAMS_HEMS_test\TS_SOLAR_INSOLATION.gdx
-    12       65 CALL           1      65  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\3_from_input_file\TS_INTERNAL_SOURCE id=internalSourceTable index=1 values=5..56 useheader=y StoreZero=y
-    13       66 GDXIN          1      66  D:\PSOC\LWang\GAMS_HEMS_test\TS_INTERNAL_SOURCE.gdx
-    14       71 CALL           1      71  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\3_from_input_file\TS_DESIRED_TEMP id=desiredTempTable index=1 values=5..16 useheader=y StoreZero=y
-    15       72 GDXIN          1      72  D:\PSOC\LWang\GAMS_HEMS_test\TS_DESIRED_TEMP.gdx
-    16       76 CALL           1      76  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\1_Static\WATER_HEATER_PAR id=WHTable index=1 values=2..9 useheader=y StoreZero=y
-    17       77 GDXIN          1      77  D:\PSOC\LWang\GAMS_HEMS_test\WATER_HEATER_PAR.gdx
-    18       81 CALL           1      81  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\3_from_input_file\TS_HOTWATER_USAGE id=waterUseTable index=1 values=5..56 useheader=y StoreZero=y
-    19       82 GDXIN          1      82  D:\PSOC\LWang\GAMS_HEMS_test\TS_HOTWATER_USAGE.gdx
-    20       86 CALL           1      86  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\1_Static\EV_PAR id=EVTable index=1 values=2..21 useheader=y StoreZero=y
-    21       87 GDXIN          1      87  D:\PSOC\LWang\GAMS_HEMS_test\EV_PAR.gdx
-    22       91 CALL           1      91  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\1_Static\STORAGE_PAR id=storageTable index=1 values=2..11 useheader=y StoreZero=y
-    23       92 GDXIN          1      92  D:\PSOC\LWang\GAMS_HEMS_test\STORAGE_PAR.gdx
-    24       97 CALL           1      97  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\3_from_input_file\TS_WIND_GEN id=windGenTable index=1 values=5..56 useheader=y StoreZero=y
-    25       98 GDXIN          1      98  D:\PSOC\LWang\GAMS_HEMS_test\TS_WIND_GEN.gdx
-    26      102 CALL           1     102  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\3_from_input_file\TS_SOLAR_GEN id=solarGenTable index=1 values=6..56 useheader=y StoreZero=y
-    27      103 GDXIN          1     103  D:\PSOC\LWang\GAMS_HEMS_test\TS_SOLAR_GEN.gdx
-    28      107 CALL           1     107  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\2_from_GLD\TS_NONCONTROL_LOAD id=nonControlLoadTable index=1 values=6..56 useheader=y StoreZero=y
-    29      108 GDXIN          1     108  D:\PSOC\LWang\GAMS_HEMS_test\TS_NONCONTROL_LOAD.gdx
-    30      113 CALL           1     113  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\1_Static\OBJECTIVE id=objTable index=1 values=2 useheader=y StoreZero=y
-    31      114 GDXIN          1     114  D:\PSOC\LWang\GAMS_HEMS_test\OBJECTIVE.gdx
-    32      119 CALL           1     119  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\1_Static\PENALTY id=penTable index=1 values=2 useheader=y StoreZero=y
-    33      120 GDXIN          1     120  D:\PSOC\LWang\GAMS_HEMS_test\PENALTY.gdx
-    34      126 CALL           1     126  csv2gdx D:\PSOC\LWang\GAMS_HEMS_test\1_Static\SYSTIME_PAR id=sysTimeTable index=1 values=2 useheader=y StoreZero=y
-    35      127 GDXIN          1     127  D:\PSOC\LWang\GAMS_HEMS_test\SYSTIME_PAR.gdx
+     1        1 INPUT          0       0  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\HEMS.gms
+     2       36 CALL           1      36  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\1_Static\HVAC_PAR id=HVACTable index=1 values=2..10 useheader=y StoreZero=y
+     3       37 GDXIN          1      37  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\HVAC_PAR.gdx
+     4       42 CALL           1      42  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\1_Static\CONTROL_DEV id=appTable index=1 values=2 useheader=y StoreZero=y
+     5       43 GDXIN          1      43  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\CONTROL_DEV.gdx
+     6       48 CALL           1      48  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\2_from_GLD\TS_ELEC_PRICE id=elecPriceTable index=1 values=5..56 useheader=y StoreZero=y
+     7       49 GDXIN          1      49  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_ELEC_PRICE.gdx
+     8       54 CALL           1      54  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\3_from_input_file\TS_OUTDOOR_TEMP id=outDoorTempTable index=1 values=5..56 useheader=y StoreZero=y
+     9       55 GDXIN          1      55  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_OUTDOOR_TEMP.gdx
+    10       60 CALL           1      60  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\3_from_input_file\TS_SOLAR_INSOLATION id=solarInsolationTable index=1 values=5..56 useheader=y StoreZero=y
+    11       61 GDXIN          1      61  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_SOLAR_INSOLATION.gdx
+    12       65 CALL           1      65  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\3_from_input_file\TS_INTERNAL_SOURCE id=internalSourceTable index=1 values=5..56 useheader=y StoreZero=y
+    13       66 GDXIN          1      66  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_INTERNAL_SOURCE.gdx
+    14       71 CALL           1      71  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\3_from_input_file\TS_DESIRED_TEMP id=desiredTempTable index=1 values=5..16 useheader=y StoreZero=y
+    15       72 GDXIN          1      72  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_DESIRED_TEMP.gdx
+    16       76 CALL           1      76  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\1_Static\WATER_HEATER_PAR id=WHTable index=1 values=2..9 useheader=y StoreZero=y
+    17       77 GDXIN          1      77  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\WATER_HEATER_PAR.gdx
+    18       81 CALL           1      81  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\3_from_input_file\TS_HOTWATER_USAGE id=waterUseTable index=1 values=5..56 useheader=y StoreZero=y
+    19       82 GDXIN          1      82  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_HOTWATER_USAGE.gdx
+    20       86 CALL           1      86  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\1_Static\EV_PAR id=EVTable index=1 values=2..21 useheader=y StoreZero=y
+    21       87 GDXIN          1      87  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\EV_PAR.gdx
+    22       91 CALL           1      91  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\1_Static\STORAGE_PAR id=storageTable index=1 values=2..11 useheader=y StoreZero=y
+    23       92 GDXIN          1      92  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\STORAGE_PAR.gdx
+    24       97 CALL           1      97  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\3_from_input_file\TS_WIND_GEN id=windGenTable index=1 values=5..56 useheader=y StoreZero=y
+    25       98 GDXIN          1      98  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_WIND_GEN.gdx
+    26      102 CALL           1     102  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\3_from_input_file\TS_SOLAR_GEN id=solarGenTable index=1 values=6..56 useheader=y StoreZero=y
+    27      103 GDXIN          1     103  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_SOLAR_GEN.gdx
+    28      107 CALL           1     107  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\2_from_GLD\TS_NONCONTROL_LOAD id=nonControlLoadTable index=1 values=6..56 useheader=y StoreZero=y
+    29      108 GDXIN          1     108  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\TS_NONCONTROL_LOAD.gdx
+    30      113 CALL           1     113  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\1_Static\OBJECTIVE id=objTable index=1 values=2 useheader=y StoreZero=y
+    31      114 GDXIN          1     114  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\OBJECTIVE.gdx
+    32      119 CALL           1     119  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\1_Static\PENALTY id=penTable index=1 values=2 useheader=y StoreZero=y
+    33      120 GDXIN          1     120  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\PENALTY.gdx
+    34      126 CALL           1     126  csv2gdx D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\1_Static\SYSTIME_PAR id=sysTimeTable index=1 values=2 useheader=y StoreZero=y
+    35      127 GDXIN          1     127  D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\SYSTIME_PAR.gdx
 
 
-COMPILATION TIME     =        1.031 SECONDS      4 MB  24.7.4 r58773 WEX-WEI
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 34
+COMPILATION TIME     =        1.110 SECONDS      4 MB  24.7.4 r58773 WEX-WEI
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 34
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -1952,7 +1952,7 @@ E x e c u t i o n
 11         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS
 12         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS
 
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 35
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 35
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -2007,7 +2007,7 @@ E x e c u t i o n
 11         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS
 12         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS
 
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 36
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 36
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -2065,7 +2065,7 @@ BASE_CASE
 7          EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS
 8          EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS
 9          EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 37
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 37
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -2123,7 +2123,7 @@ EV_SOC_INSUF 1.000,    PGRID_UB_VIO   EPS,    PGRID_LB_VIO   EPS,    PEV_DELTA  
 0          EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS
 1          EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS
 2          EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS         EPS
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 38
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 38
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -2170,14 +2170,14 @@ BASE_CASE 1.000
          CO_RM_TEMP  CO_OUT_TE~  CO_POWER_~         COP  RATED_POW~   MIN_POWER  INI_RM_TE~  CO_SOLAR_~  CO_INTERN~
 
 HEATING       0.992       0.008       0.206       3.500       5.600         EPS      77.000         EPS         EPS
-COOLING       0.900       0.100      -0.189       3.230      21.200         EPS      75.241         EPS         EPS
+COOLING       0.900       0.100      -0.189       3.230      21.200         EPS      75.263         EPS         EPS
 
 
 ----    221 PARAMETER coOutTemp  
 
 HEATING 0.008,    COOLING 0.100
 
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 39
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 39
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -2202,7 +2202,7 @@ HEATING EPS,    COOLING EPS
 HEATING  5.600,    COOLING 21.200
 
 
-----    249 PARAMETER iniRmTemp            =       75.241  
+----    249 PARAMETER iniRmTemp            =       75.263  
 
 ----    253 PARAMETER HVACCOP  
 
@@ -2235,7 +2235,7 @@ HEATING 3.500,    COOLING 3.230
 4        4.000       4.000       4.000      70.000      85.000      75.000     108.000     118.000     113.000         EPS       0.500       4.000
 5        5.000       5.000       5.000      70.000      85.000      75.000     108.000     118.000     113.000         EPS       0.500       5.000
 6        6.000       6.000       6.000      70.000      85.000      75.000     108.000     118.000     113.000         EPS       0.500       6.000
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 40
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 40
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -2281,7 +2281,7 @@ EV_1 10.000
 
 EV_1 0.920
 
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 41
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 41
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -2336,7 +2336,7 @@ SPTOLB1(1,BASE_CASE)..  pHVAC(1,BASE_CASE) + 10000*ifrated(1) =L= 10021.2 ; (LHS
      
 SPTOLB1(2,BASE_CASE)..  pHVAC(2,BASE_CASE) + 10000*ifrated(2) =L= 10021.2 ; (LHS = 0)
      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 42
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 42
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -2391,7 +2391,7 @@ SPTOLB5(3,BASE_CASE)..  pHVAC(3,BASE_CASE) - 10000*ifrated(3) =L= 21.19 ; (LHS =
      
 REMAINING 9 ENTRIES SKIPPED
 
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 43
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 43
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -2445,7 +2445,7 @@ objDefElecConsump..  - 0.08*pGrid(1,BASE_CASE) - 0.08*pGrid(2,BASE_CASE) - 0.08*
      
       - 45*EVSOCSlack(6) - 45*EVSOCSlack(7) - 45*EVSOCSlack(8) - 45*EVSOCSlack(9) - 45*EVSOCSlack(10) - 45*EVSOCSlack(11) - 45*EVSOCSlack(12) =E= 0 ; (LHS = 0)
      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 44
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 44
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -2468,7 +2468,7 @@ REMAINING 9 ENTRIES SKIPPED
 
 ---- inirmTempcon  =E=  
 
-inirmTempcon(0,BASE_CASE)..  rmTemp(0,BASE_CASE) =E= 75.2408586485391 ; (LHS = 0, INFES = 75.2408586485391 ****)
+inirmTempcon(0,BASE_CASE)..  rmTemp(0,BASE_CASE) =E= 75.2632253159445 ; (LHS = 0, INFES = 75.2632253159445 ****)
      
 
 ---- f_thermEqONCool1  =L=  
@@ -2503,7 +2503,7 @@ ubrmtemp(3,BASE_CASE)..  rmTemp(3,BASE_CASE) - s1(3,BASE_CASE) =L= 75 ; (LHS = 0
      
 REMAINING 9 ENTRIES SKIPPED
 
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 45
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 45
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -2558,7 +2558,7 @@ f_ubpHVACOFF2(1,BASE_CASE)..  - pHVAC(1,BASE_CASE) - 10000*f_ON(1) =L= 0 ; (LHS 
      
 f_ubpHVACOFF2(2,BASE_CASE)..  - pHVAC(2,BASE_CASE) - 10000*f_ON(2) =L= 0 ; (LHS = 0)
      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 46
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 46
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -2613,7 +2613,7 @@ f_calPHVACSP2(3,BASE_CASE)..  4.76947535771065*rmTemp(2,BASE_CASE) - 5.299417064
      
 REMAINING 9 ENTRIES SKIPPED
 
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 47
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 47
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -2666,7 +2666,7 @@ thermEqWH(WH_1,3,BASE_CASE)..  - 0.9986*WHTemp(WH_1,2,BASE_CASE) + WHTemp(WH_1,3
      
 REMAINING 9 ENTRIES SKIPPED
 
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 48
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 48
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -2721,7 +2721,7 @@ f_ubpWHONHeat(WH_1,0,BASE_CASE)..  pWH(WH_1,0,BASE_CASE) - 8.3*f_WHON(WH_1,0) =L
      
 f_ubpWHONHeat(WH_1,1,BASE_CASE)..  pWH(WH_1,1,BASE_CASE) - 8.3*f_WHON(WH_1,1) =L= 0 ; (LHS = 0)
      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 49
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 49
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -2776,7 +2776,7 @@ f_extraWHCon1(WH_1,3,BASE_CASE)..  WHTempSP(WH_1,3) - calWHTemp_noHeat(WH_1,3,BA
      
 REMAINING 9 ENTRIES SKIPPED
 
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 50
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 50
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -2831,7 +2831,7 @@ f_ancbin1WH(WH_1,1,BASE_CASE)..  WHTempSP(WH_1,1) - calWHTemp_noHeat(WH_1,1,BASE
      
 f_ancbin1WH(WH_1,2,BASE_CASE)..  WHTempSP(WH_1,2) - calWHTemp_noHeat(WH_1,2,BASE_CASE) + 10000*f_WHON(WH_1,2) + 10000*f_bbb1(WH_1,2) =L= 20000 ; (LHS = 0)
      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 51
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 51
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -2886,7 +2886,7 @@ f_ancbin5WH(WH_1,3,BASE_CASE)..  - WHTemp(WH_1,3,BASE_CASE) + calWHTemp_noHeat(W
      
 REMAINING 9 ENTRIES SKIPPED
 
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 52
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 52
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -2941,7 +2941,7 @@ f_ancbin10WH(WH_1,1,BASE_CASE)..  WHTemp(WH_1,1,BASE_CASE) - calWHTemp_ratedHeat
      
 f_ancbin10WH(WH_1,2,BASE_CASE)..  WHTemp(WH_1,2,BASE_CASE) - calWHTemp_ratedHeat(WH_1,2,BASE_CASE) + 10000*f_WHON(WH_1,2) - 10000*f_bbb1(WH_1,2) + 10000*f_bbb2(WH_1,2) =L= 20000 ; (LHS = 0)
      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 53
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 53
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -2996,7 +2996,7 @@ f_EVSOCdynamicEq2Discharge(EV_1,3,BASE_CASE)..  - 0.0222222222222222*EVDischarRa
      
 REMAINING 7 ENTRIES SKIPPED
 
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 54
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 54
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3050,7 +3050,7 @@ EViniSOCEq(EV_1,0,BASE_CASE)..  EVSOC(EV_1,0,BASE_CASE) =E= 0.00668 ; (LHS = 0, 
 
 EVendSOCEq(EV_1,10,BASE_CASE)..  EVSOC(EV_1,10,BASE_CASE) + EVSOCSlack(10) =E= 0.92 ; (LHS = 0, INFES = 0.92 ****)
      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 55
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 55
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3105,7 +3105,7 @@ f_EVStateCon(EV_1,1,BASE_CASE)..  f_EVChargeState(EV_1,1) + f_EVDischargeState(E
      
 f_EVStateCon(EV_1,2,BASE_CASE)..  f_EVChargeState(EV_1,2) + f_EVDischargeState(EV_1,2) =L= 1 ; (LHS = 0)
      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 56
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 56
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3163,7 +3163,7 @@ EVEnergyCostDef..  EVEnergyCost - 0.244*EVCharRate(EV_1,1,BASE_CASE) - 0.244*EVC
      
       + 0.244*EVDischarRate(EV_1,7,BASE_CASE) + 0.244*EVDischarRate(EV_1,8,BASE_CASE) + 0.244*EVDischarRate(EV_1,9,BASE_CASE) + 0.244*EVDischarRate(EV_1,10,BASE_CASE) + 0.244*EVDischarRate(EV_1,11,BASE_CASE) + 0.32*EVDischarRate(EV_1,12,BASE_CASE) =E= 0 ;
      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 57
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 57
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3200,7 +3200,7 @@ WindEnergyCostDef..  WindEnergyCost =E= 0 ; (LHS = 0)
 
 NCLEnergycostDef..  NCLEnergycost =E= 0 ; (LHS = 0)
      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 58
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 58
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3258,7 +3258,7 @@ REMAINING 9 ENTRIES SKIPPED
 pGridSlack2(1,BASE_CASE)
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
            EPS  objDefEnerCost
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 59
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 59
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3315,7 +3315,7 @@ sumObj
                 (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
         1       objDefSumObj
 
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 60
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 60
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3368,7 +3368,7 @@ NCLEnergycost
                 (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
         1       NCLEnergycostDef
 
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 61
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 61
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3426,7 +3426,7 @@ rmTempSP(1)
         1       lbrmSetTemp(1)
         1       ubrmSetTemp(1)
 
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 62
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 62
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3484,7 +3484,7 @@ pHVAC(2,BASE_CASE)
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
        -1       SPTOUB3(2,BASE_CASE)
         1       SPTOUB4(2,BASE_CASE)
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 63
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 63
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3542,7 +3542,7 @@ REMAINING 9 ENTRIES SKIPPED
 calPHVAC_CoolSP(1,BASE_CASE)
                 (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
         1       f_calPHVACSP1(1,BASE_CASE)
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 64
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 64
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3600,7 +3600,7 @@ s2(3,BASE_CASE)
         1       lbrmtemp(3,BASE_CASE)
 
 REMAINING 9 ENTRIES SKIPPED
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 65
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 65
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3658,7 +3658,7 @@ WHTempSP(WH_1,1)
         0.7199  f_calPWHSP2(WH_1,1,BASE_CASE)
         1       f_ancbin1WH(WH_1,1,BASE_CASE)
        -1       f_ancbin6WH(WH_1,1,BASE_CASE)
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 66
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 66
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3716,7 +3716,7 @@ pWH(WH_1,2,BASE_CASE)
         1       f_ubpWHONHeat(WH_1,2,BASE_CASE)
         1       f_ubpWHOFF1(WH_1,2,BASE_CASE)
        -1       f_ubpWHOFF2(WH_1,2,BASE_CASE)
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 67
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 67
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3774,7 +3774,7 @@ calWHTemp_ratedHeat(WH_1,1,BASE_CASE)
 
 calWHTemp_ratedHeat(WH_1,2,BASE_CASE)
                 (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 68
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 68
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3831,7 +3831,7 @@ s5(WH_1,3,BASE_CASE)
        -1       ubWHtemp(WH_1,3,BASE_CASE)
 
 REMAINING 9 ENTRIES SKIPPED
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 69
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 69
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3886,7 +3886,7 @@ bbb1(WH_1,3)
     10000       ancbin2WH(WH_1,3,BASE_CASE)
 
 REMAINING 9 ENTRIES SKIPPED
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 70
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 70
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -3944,7 +3944,7 @@ EVCharRate(EV_1,2,BASE_CASE)
        -0.244   EVEnergyCostDef
 
 REMAINING 10 ENTRIES SKIPPED
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 71
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 71
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4002,7 +4002,7 @@ EVSOC(EV_1,1,BASE_CASE)
        -1       f_EVSOCdynamicEq2Idle(EV_1,1,BASE_CASE)
         1       f_EVSOCdynamicEq2Idle(EV_1,2,BASE_CASE)
         1       EVubSOC(EV_1,1,BASE_CASE)
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 72
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 72
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4060,7 +4060,7 @@ storCharRate(STORAGE_1,1,BASE_CASE)
 
 storCharRate(STORAGE_1,2,BASE_CASE)
                 (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 73
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 73
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4118,7 +4118,7 @@ f_h(1)
 
 f_h(2)
                 (.LO, .L, .UP, .M = 0, 0, 1, 0)
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 74
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 74
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4176,7 +4176,7 @@ f_WHON(WH_1,2)
     10000       f_ancbin8WH(WH_1,2,BASE_CASE)
     10000       f_ancbin9WH(WH_1,2,BASE_CASE)
     10000       f_ancbin10WH(WH_1,2,BASE_CASE)
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 75
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 75
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4234,7 +4234,7 @@ f_bbb2(WH_1,1)
     10000       f_ancbin8WH(WH_1,1,BASE_CASE)
     10000       f_ancbin9WH(WH_1,1,BASE_CASE)
     10000       f_ancbin10WH(WH_1,1,BASE_CASE)
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 76
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 76
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4291,7 +4291,7 @@ f_EVChargeState(EV_1,3)
         1       f_EVStateCon(EV_1,3,BASE_CASE)
 
 REMAINING 9 ENTRIES SKIPPED
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 77
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 77
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4349,7 +4349,7 @@ ifrated(2)
    -10000       SPTOLB5(2,BASE_CASE)
 
 ifrated(3)
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 78
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 78
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4389,7 +4389,7 @@ ifzero(3)
     10000       SPTOUB4(3,BASE_CASE)
 
 REMAINING 9 ENTRIES SKIPPED
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 79
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 79
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Model Statistics    SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4401,11 +4401,11 @@ BLOCKS OF VARIABLES          50     SINGLE VARIABLES          463
 NON ZERO ELEMENTS         2,186     DISCRETE VARIABLES        133
 
 
-GENERATION TIME      =        0.016 SECONDS      4 MB  24.7.4 r58773 WEX-WEI
+GENERATION TIME      =        0.031 SECONDS      4 MB  24.7.4 r58773 WEX-WEI
 
 
 EXECUTION TIME       =        0.031 SECONDS      4 MB  24.7.4 r58773 WEX-WEI
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 80
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 80
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4418,9 +4418,9 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
 **** SOLVER STATUS     1 Normal Completion         
 **** MODEL STATUS      1 Optimal                   
-**** OBJECTIVE VALUE               28.8675
+**** OBJECTIVE VALUE               28.8935
 
- RESOURCE USAGE, LIMIT          0.062       300.000
+ RESOURCE USAGE, LIMIT          0.110       300.000
  ITERATION COUNT, LIMIT        47    2000000000
 
 IBM ILOG CPLEX   24.7.4 r58773 Released Sep 19, 2016 WEI x86 64bit/MS Windows 
@@ -4430,16 +4430,16 @@ Cplex 12.6.3.0
 Space for names approximately 0.04 Mb
 Use option 'names no' to turn use of names off
 MIP status(101): integer optimal solution
-Cplex Time: 0.06sec (det. 15.25 ticks)
+Cplex Time: 0.08sec (det. 15.25 ticks)
 Fixing integer variables, and solving final LP...
 Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.83 ticks)
+Cplex Time: 0.02sec (det. 0.83 ticks)
 Proven optimal solution.
 
-MIP Solution:           28.867462    (16 iterations, 0 nodes)
-Final Solve:            28.867462    (31 iterations)
+MIP Solution:           28.893491    (16 iterations, 0 nodes)
+Final Solve:            28.893491    (31 iterations)
 
-Best possible:          28.867462
+Best possible:          28.893491
 Absolute gap:            0.000000
 Relative gap:            0.000000
 
@@ -4460,7 +4460,7 @@ Relative gap:            0.000000
 10        -INF        10085.0000     10085.0000          .          
 11        -INF        10085.0000     10085.0000          .          
 12        -INF        10085.0000     10085.0000          .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 81
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 81
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4486,7 +4486,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
                     LOWER          LEVEL          UPPER         MARGINAL
 
-1 .BASE_CASE        -INF           -6.9781        -0.0100          .          
+1 .BASE_CASE        -INF           -7.0848        -0.0100          .          
 2 .BASE_CASE        -INF           -6.8892        -0.0100          .          
 3 .BASE_CASE        -INF           -5.8294        -0.0100          .          
 4 .BASE_CASE        -INF           -5.2994        -0.0100          .          
@@ -4503,7 +4503,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
                     LOWER          LEVEL          UPPER         MARGINAL
 
-1 .BASE_CASE        -INF            6.9781     10000.0000          .          
+1 .BASE_CASE        -INF            7.0848     10000.0000          .          
 2 .BASE_CASE        -INF            6.8892     10000.0000          .          
 3 .BASE_CASE        -INF            5.8294     10000.0000          .          
 4 .BASE_CASE        -INF            5.2994     10000.0000          .          
@@ -4515,7 +4515,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 10.BASE_CASE        -INF        10000.0000     10000.0000          .          
 11.BASE_CASE        -INF        10000.0000     10000.0000          .          
 12.BASE_CASE        -INF        10000.0000     10000.0000          .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 82
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 82
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4524,7 +4524,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
                     LOWER          LEVEL          UPPER         MARGINAL
 
-1 .BASE_CASE        -INF            6.9781     10021.2000          .          
+1 .BASE_CASE        -INF            7.0848     10021.2000          .          
 2 .BASE_CASE        -INF            6.8892     10021.2000          .          
 3 .BASE_CASE        -INF            5.8294     10021.2000          .          
 4 .BASE_CASE        -INF            5.2994     10021.2000          .          
@@ -4541,7 +4541,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
                     LOWER          LEVEL          UPPER         MARGINAL
 
-1 .BASE_CASE        -INF           -6.9781      9978.8000          .          
+1 .BASE_CASE        -INF           -7.0848      9978.8000          .          
 2 .BASE_CASE        -INF           -6.8892      9978.8000          .          
 3 .BASE_CASE        -INF           -5.8294      9978.8000          .          
 4 .BASE_CASE        -INF           -5.2994      9978.8000          .          
@@ -4570,7 +4570,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 10        -INF          -85.0000      9930.0000          .          
 11        -INF          -85.0000      9930.0000          .          
 12        -INF          -85.0000      9930.0000          .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 83
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 83
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4596,7 +4596,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
                     LOWER          LEVEL          UPPER         MARGINAL
 
-1 .BASE_CASE        -INF            6.9781        21.1900          .          
+1 .BASE_CASE        -INF            7.0848        21.1900          .          
 2 .BASE_CASE        -INF            6.8892        21.1900          .          
 3 .BASE_CASE        -INF            5.8294        21.1900          .          
 4 .BASE_CASE        -INF            5.2994        21.1900          .          
@@ -4628,7 +4628,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 5 .BASE_CASE          .              .              .             0.2440      
 6 .BASE_CASE          .              .              .             0.2440      
 7 .BASE_CASE          .              .              .             0.2440      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 84
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 84
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4647,7 +4647,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
                    LOWER          LEVEL          UPPER         MARGINAL
 
-0.BASE_CASE        75.2409        75.2409        75.2409         1.1638      
+0.BASE_CASE        75.2632        75.2632        75.2632         1.1638      
 
 ---- EQU f_thermEqONCool1  
 
@@ -4682,7 +4682,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 10.BASE_CASE        -INF           -8.9000        -8.9000        -1.0298      
 11.BASE_CASE        -INF           -9.2000        -9.2000        -0.7220      
 12.BASE_CASE        -INF           -9.5000        -9.5000        -0.3800      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 85
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 85
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4726,7 +4726,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
                     LOWER          LEVEL          UPPER         MARGINAL
 
 0 .BASE_CASE        -INF             .            21.2000          .          
-1 .BASE_CASE        -INF            6.9781        21.2000          .          
+1 .BASE_CASE        -INF            7.0848        21.2000          .          
 2 .BASE_CASE        -INF            6.8892        21.2000          .          
 3 .BASE_CASE        -INF            5.8294        21.2000          .          
 4 .BASE_CASE        -INF            5.2994        21.2000          .          
@@ -4738,7 +4738,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 10.BASE_CASE        -INF             .            21.2000          .          
 11.BASE_CASE        -INF             .            21.2000          .          
 12.BASE_CASE        -INF             .            21.2000          .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 86
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 86
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4748,7 +4748,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
                     LOWER          LEVEL          UPPER         MARGINAL
 
 0 .BASE_CASE        -INF             .              .              .          
-1 .BASE_CASE        -INF           -6.9781          .              .          
+1 .BASE_CASE        -INF           -7.0848          .              .          
 2 .BASE_CASE        -INF           -6.8892          .              .          
 3 .BASE_CASE        -INF           -5.8294          .              .          
 4 .BASE_CASE        -INF           -5.2994          .              .          
@@ -4765,7 +4765,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
                     LOWER          LEVEL          UPPER         MARGINAL
 
-1 .BASE_CASE        -INF        -9993.0219          .              .          
+1 .BASE_CASE        -INF        -9992.9152          .              .          
 2 .BASE_CASE        -INF        -9993.1108          .              .          
 3 .BASE_CASE        -INF        -9994.1706          .              .          
 4 .BASE_CASE        -INF        -9994.7006          .              .          
@@ -4782,7 +4782,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
                     LOWER          LEVEL          UPPER         MARGINAL
 
-1 .BASE_CASE        -INF       -10006.9781          .              .          
+1 .BASE_CASE        -INF       -10007.0848          .              .          
 2 .BASE_CASE        -INF       -10006.8892          .              .          
 3 .BASE_CASE        -INF       -10005.8294          .              .          
 4 .BASE_CASE        -INF       -10005.2994          .              .          
@@ -4794,7 +4794,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 10.BASE_CASE        -INF       -10000.0000          .              .          
 11.BASE_CASE        -INF       -10000.0000          .              .          
 12.BASE_CASE        -INF       -10000.0000          .              .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 87
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 87
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4849,7 +4849,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 10.BASE_CASE        -INF           47.1648        47.1648         EPS         
 11.BASE_CASE        -INF           48.7546        48.7546         EPS         
 12.BASE_CASE        -INF           50.3445        50.3445         EPS         
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 88
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 88
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4904,7 +4904,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 10        -INF           85.0000        85.0000          .          
 11        -INF           85.0000        85.0000          .          
 12        -INF           85.0000        85.0000          .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 89
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 89
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -4962,7 +4962,7 @@ WH_1.6 .BASE_CASE        -INF          113.0000       113.0000          .
 WH_1.7 .BASE_CASE        -INF          113.0000       113.0000          .          
 WH_1.8 .BASE_CASE        -INF          113.0000       113.0000          .          
 WH_1.9 .BASE_CASE        -INF          113.0000       113.0000          .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 90
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 90
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5020,7 +5020,7 @@ WH_1.4        108.0000       118.0000        +INF             .
 WH_1.5        108.0000       118.0000        +INF             .          
 WH_1.6        108.0000       112.8418        +INF             .          
 WH_1.7        108.0000       118.0000        +INF             .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 91
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 91
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5078,7 +5078,7 @@ WH_1.1 .BASE_CASE        -INF       -10001.4360          .              .
 WH_1.2 .BASE_CASE        -INF       -10000.1139          .              .          
 WH_1.3 .BASE_CASE        -INF       -10000.1139          .              .          
 WH_1.4 .BASE_CASE        -INF       -10000.1139          .              .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 92
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 92
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5129,7 +5129,7 @@ WH_1.9 .BASE_CASE    -10000.0000     -9994.8418        +INF             .
 WH_1.10.BASE_CASE    -10000.0000     -9993.0058        +INF             .          
 WH_1.11.BASE_CASE    -10000.0000     -9993.0058        +INF             .          
 WH_1.12.BASE_CASE    -10000.0000     -9995.6618        +INF             .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 93
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 93
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5184,7 +5184,7 @@ WH_1.9 .BASE_CASE        -INF        10000.0000     10000.0000         EPS
 WH_1.10.BASE_CASE        -INF        10001.3218     10001.3218         EPS         
 WH_1.11.BASE_CASE        -INF        10001.3218     10001.3218         EPS         
 WH_1.12.BASE_CASE        -INF        10006.6091     10006.6091         EPS         
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 94
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 94
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5239,7 +5239,7 @@ WH_1.9 .BASE_CASE        -INF            0.1139     20000.0000          .
 WH_1.10.BASE_CASE        -INF            1.4357     20000.0000          .          
 WH_1.11.BASE_CASE        -INF            1.4357     20000.0000          .          
 WH_1.12.BASE_CASE        -INF             .         20000.0000          .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 95
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 95
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5294,7 +5294,7 @@ WH_1.9 .BASE_CASE        -INF         9999.8418     20000.0000          .
 WH_1.10.BASE_CASE        -INF         9998.0058     20000.0000          .          
 WH_1.11.BASE_CASE        -INF         9998.0058     20000.0000          .          
 WH_1.12.BASE_CASE        -INF        10000.0000     20000.0000          .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 96
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 96
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5349,7 +5349,7 @@ WH_1.9 .BASE_CASE        -INF        10000.1139     20008.3000          .
 WH_1.10.BASE_CASE        -INF        10001.4357     20008.3000          .          
 WH_1.11.BASE_CASE        -INF        10001.4357     20008.3000          .          
 WH_1.12.BASE_CASE        -INF        10000.0000     20008.3000          .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 97
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 97
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5402,7 +5402,7 @@ EV_1.7 .BASE_CASE        -INF             .         10000.0000          .
 EV_1.8 .BASE_CASE        -INF        10000.0000     10000.0000       -10.9800      
 EV_1.9 .BASE_CASE        -INF        10000.0000     10000.0000       -10.9800      
 EV_1.10.BASE_CASE        -INF        10000.0000     10000.0000       -10.9800      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 98
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 98
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5460,7 +5460,7 @@ EV_1.1 .BASE_CASE        -INF        -9999.8800          .              .
 EV_1.2 .BASE_CASE        -INF        -9999.8800          .              .          
 EV_1.3 .BASE_CASE        -INF        -9999.8800          .              .          
 EV_1.4 .BASE_CASE        -INF        -9999.8800          .              .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 13:22:38 Page 99
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                                03/14/18 17:22:27 Page 99
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5512,7 +5512,7 @@ EV_1.12.BASE_CASE          .              .              .            -0.3200
                         LOWER          LEVEL          UPPER         MARGINAL
 
 EV_1.0.BASE_CASE         0.0067         0.0067         0.0067       -10.9800      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 100
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 100
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5570,7 +5570,7 @@ EV_1.6 .BASE_CASE        -INF             .              .            -0.2440
 EV_1.7 .BASE_CASE        -INF             .              .            -0.2440      
 EV_1.8 .BASE_CASE        -INF             .              .            -0.2440      
 EV_1.9 .BASE_CASE        -INF             .              .            -0.2440      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 101
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 101
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5628,7 +5628,7 @@ EV_1.4 .BASE_CASE        -INF            0.4867         1.0000          .
 EV_1.5 .BASE_CASE        -INF            0.4867         1.0000          .          
 EV_1.6 .BASE_CASE        -INF            0.6067         1.0000          .          
 EV_1.7 .BASE_CASE        -INF            0.6067         1.0000          .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 102
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 102
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5670,7 +5670,7 @@ EV_1.10.BASE_CASE          .             0.9200        +INF             .
 
                     LOWER          LEVEL          UPPER         MARGINAL
 
-1 .BASE_CASE        -INF           13.8141        +INF             .          
+1 .BASE_CASE        -INF           13.9208        +INF             .          
 2 .BASE_CASE        -INF           12.4031        +INF             .          
 3 .BASE_CASE        -INF           11.3433        +INF             .          
 4 .BASE_CASE        -INF           10.8133        +INF             .          
@@ -5682,7 +5682,7 @@ EV_1.10.BASE_CASE          .             0.9200        +INF             .
 10.BASE_CASE        -INF            6.8357        +INF             .          
 11.BASE_CASE        -INF            1.4357        +INF             .          
 12.BASE_CASE        -INF             .            +INF             .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 103
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 103
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5727,12 +5727,12 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
                            LOWER          LEVEL          UPPER         MARGINAL
 
----- VAR energyCost        -INF           24.3178        +INF             .          
+---- VAR energyCost        -INF           24.3438        +INF             .          
 ---- VAR discom            -INF            4.5497        +INF             .          
----- VAR elecConsu~        -INF            7.9730        +INF             .          
+---- VAR elecConsu~        -INF            7.9816        +INF             .          
 ---- VAR peakLoad          -INF             .            +INF            EPS         
----- VAR sumObj            -INF           28.8675        +INF             .          
----- VAR HVACEnerg~        -INF           12.6937        +INF             .          
+---- VAR sumObj            -INF           28.8935        +INF             .          
+---- VAR HVACEnerg~        -INF           12.7197        +INF             .          
 ---- VAR WHEnergyC~        -INF            1.5959        +INF             .          
 ---- VAR EVEnergyC~        -INF           10.0283        +INF             .          
 ---- VAR StorEnerg~        -INF             .            +INF             .          
@@ -5740,7 +5740,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 ---- VAR WindEnerg~        -INF             .            +INF             .          
 ---- VAR NCLEnergy~        -INF             .            +INF             .          
 
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 104
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 104
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5755,7 +5755,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
                     LOWER          LEVEL          UPPER         MARGINAL
 
-0 .BASE_CASE        -INF           75.2409        +INF             .          
+0 .BASE_CASE        -INF           75.2632        +INF             .          
 1 .BASE_CASE        -INF           75.0000        +INF             .          
 2 .BASE_CASE        -INF           75.0000        +INF             .          
 3 .BASE_CASE        -INF           75.0000        +INF             .          
@@ -5791,14 +5791,14 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
                     LOWER          LEVEL          UPPER         MARGINAL
 
 0 .BASE_CASE          .              .            +INF            EPS         
-1 .BASE_CASE          .             6.9781        +INF             .          
+1 .BASE_CASE          .             7.0848        +INF             .          
 2 .BASE_CASE          .             6.8892        +INF             .          
 3 .BASE_CASE          .             5.8294        +INF             .          
 4 .BASE_CASE          .             5.2994        +INF             .          
 5 .BASE_CASE          .             5.2994        +INF             .          
 6 .BASE_CASE          .             5.2994        +INF             .          
 7 .BASE_CASE          .             5.2994        +INF             .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 105
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 105
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5817,7 +5817,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
                     LOWER          LEVEL          UPPER         MARGINAL
 
-1 .BASE_CASE        -INF           76.3168        +INF             .          
+1 .BASE_CASE        -INF           76.3369        +INF             .          
 2 .BASE_CASE        -INF           76.3000        +INF             .          
 3 .BASE_CASE        -INF           76.1000        +INF             .          
 4 .BASE_CASE        -INF           76.0000        +INF             .          
@@ -5834,7 +5834,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
                     LOWER          LEVEL          UPPER         MARGINAL
 
-1 .BASE_CASE        -INF           72.3163        +INF             .          
+1 .BASE_CASE        -INF           72.3365        +INF             .          
 2 .BASE_CASE        -INF           72.2996        +INF             .          
 3 .BASE_CASE        -INF           72.0996        +INF             .          
 4 .BASE_CASE        -INF           71.9996        +INF             .          
@@ -5851,12 +5851,12 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
                     LOWER          LEVEL          UPPER         MARGINAL
 
-1 .BASE_CASE        -INF           33.4752        +INF             .          
+1 .BASE_CASE        -INF           33.5819        +INF             .          
 2 .BASE_CASE        -INF           33.3863        +INF             .          
 3 .BASE_CASE        -INF           32.3264        +INF             .          
 4 .BASE_CASE        -INF           31.7965        +INF             .          
 5 .BASE_CASE        -INF           31.7965        +INF             .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 106
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 106
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5914,7 +5914,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 WH_1.0 .BASE_CASE        -INF          111.1611        +INF             .          
 WH_1.1 .BASE_CASE        -INF          113.0000        +INF             .          
 WH_1.2 .BASE_CASE        -INF          113.0000        +INF             .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 107
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 107
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -5968,7 +5968,7 @@ WH_1.9 .BASE_CASE          .             0.1139        +INF             .
 WH_1.10.BASE_CASE          .             1.4357        +INF             .          
 WH_1.11.BASE_CASE          .             1.4357        +INF             .          
 WH_1.12.BASE_CASE          .              .            +INF            0.1533      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 108
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 108
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -6023,7 +6023,7 @@ WH_1.9 .BASE_CASE        -INF            3.7136        +INF             .
 WH_1.10.BASE_CASE        -INF            5.0354        +INF             .          
 WH_1.11.BASE_CASE        -INF            5.0354        +INF             .          
 WH_1.12.BASE_CASE        -INF            3.1233        +INF             .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 109
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 109
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -6078,7 +6078,7 @@ WH_1.9           .              .             1.0000         EPS
 WH_1.10          .              .             1.0000         EPS         
 WH_1.11          .              .             1.0000         EPS         
 WH_1.12          .              .             1.0000         EPS         
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 110
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 110
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -6134,7 +6134,7 @@ EV_1.9 .BASE_CASE        -INF            5.4000        +INF             .
 EV_1.10.BASE_CASE        -INF            5.4000        +INF             .          
 EV_1.11.BASE_CASE        -INF             .            +INF             .          
 EV_1.12.BASE_CASE        -INF             .            +INF             .          
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 111
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 111
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -6189,7 +6189,7 @@ EV_1.10.BASE_CASE          .             0.9200        +INF             .
 10          .              .            +INF           34.0200      
 11          .              .            +INF           45.0000      
 12          .              .            +INF           45.0000      
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 112
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 112
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -6244,7 +6244,7 @@ STORAGE_1.12.BASE_CASE        -INF             .            +INF            EPS
 10          .             1.0000         1.0000         EPS         
 11          .             1.0000         1.0000         EPS         
 12          .             1.0000         1.0000         EPS         
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 113
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 113
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -6300,7 +6300,7 @@ WH_1.9           .              .             1.0000         EPS
 WH_1.10          .              .             1.0000         EPS         
 WH_1.11          .              .             1.0000         EPS         
 WH_1.12          .              .             1.0000         EPS         
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 114
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 114
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -6355,7 +6355,7 @@ EV_1.9           .              .             1.0000         EPS
 EV_1.10          .              .             1.0000         EPS         
 EV_1.11          .              .             1.0000         EPS         
 EV_1.12          .              .             1.0000         EPS         
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 115
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 115
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 
@@ -6398,7 +6398,7 @@ Solution Report     SOLVE SHEMS_overall Using MIP From line 1745
 **** REPORT SUMMARY :        0     NONOPT
                              0 INFEASIBLE
                              0  UNBOUNDED
-GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 13:22:38 Page 116
+GAMS 24.7.4  r58773 Released Sep 19, 2016 WEX-WEI x86 64bit/MS Windows                                                                                                                                                               03/14/18 17:22:27 Page 116
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -6451,5 +6451,5 @@ USER: Small MUD - 5 User License                     G170912:1000AO-WIN
 
 **** FILE SUMMARY
 
-Input      D:\PSOC\LWang\GAMS_HEMS_test\HEMS.gms
-Output     D:\PSOC\LWang\GAMS_HEMS_test\HEMS.lst
+Input      D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\HEMS.gms
+Output     D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\HEMS.lst

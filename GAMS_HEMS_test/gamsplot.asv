@@ -1,8 +1,8 @@
 clear;
 GAMSPATH='C:\GAMS\win64\24.7';
 addpath(GAMSPATH); % add GAMS foler to search path
-HEMSPATH = 'D:\PSOC\LWang\GAMS_HEMS_test\HEMS.gms';
-IO_DIRECTORY=('D:\PSOC\LWang\GAMS_HEMS_test');
+HEMSPATH = 'HEMS.gms';
+
 
 EV = '1_Static\EV_PAR.csv';
 HVAC = '1_Static\HVAC_PAR.csv';
@@ -136,3 +136,102 @@ end
 
 
 combined = ones(n_period*2+1,3);
+for n = 1:n_period
+	combined(2*n-1,:) = pre_decision(n,:);
+    combined(2*n,:) = post_decision(n,:);
+    x(2*n-1) = n;
+    x(2*n) = n+0.2;
+    x_r(n) = n+0.6;
+end
+combined(2*n_period+1,:) = pre_decision(n_period+1,:);
+x(2*n_period+1) = n_period+1;
+
+%%
+subplot(2,2,1)
+rectangle('Position',[14 0 6 0.5],'EdgeColor',[1 1 1],'FaceColor',[1,0,1]);
+hold on;
+rectangle('Position',[11 0 3 0.5],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+rectangle('Position',[20 0 2 0.5],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+plot(price_store(1,1:24),'DisplayName','Electricity Price')
+xlabel('Time(hr)');
+ylabel('Price ($/KWh)');
+xlim([1 24]);
+legend('show');
+
+subplot(2,2,2)
+yyaxis left
+rectangle('Position',[14 0 6 125],'EdgeColor',[1 1 1],'FaceColor',[1,0,1]);
+hold on;
+rectangle('Position',[11 0 3 125],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+rectangle('Position',[20 0 2 125],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+plot(x,combined(:,2),'black','DisplayName','Water Temperature','LineWidth',2);
+hold on;
+line1 = refline([0 113]);
+line1.LineStyle = '-.';
+line1.Color = 'g';
+line1.DisplayName = 'Desired Temperature';
+ylabel('Temperature (F)')
+ylim([100 125]);
+hold on;
+yyaxis right
+bar(x_r,forecast(1:24,2),'DisplayName','Water Usage');
+ylabel('Water Usage (Gallons per hour)');
+ylim([0 15]);
+xlabel('Time (hr)');
+legend('show');
+xlim([1 25]);
+
+
+subplot(2,2,3)
+yyaxis left
+rectangle('Position',[14 0 6 85],'EdgeColor',[1 1 1],'FaceColor',[1,0,1]);
+hold on;
+rectangle('Position',[11 0 3 85],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+rectangle('Position',[20 0 2 85],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+plot(x,combined(:,1),'black','DisplayName','Room Temperature','LineWidth',2);
+hold on;
+line2 = refline([0 75]);
+line2.LineStyle = '-.';
+line2.Color = 'g';
+line2.DisplayName = 'Desired Temperature';
+ylabel('Temperature(F)');
+ylim([60 85]);
+hold on;
+yyaxis right
+bar(x_r,forecast(1:24,1),'DisplayName','Outside Temperature');
+ylabel('Temperature(F)');
+ylim([75 120]);
+xlabel('Time(hr)');
+xlim([1 25]);
+legend('show');
+
+subplot(2,2,4)
+yyaxis left
+rectangle('Position',[14 0 6 100],'EdgeColor',[1 1 1],'FaceColor',[1,0,1]);
+hold on;
+rectangle('Position',[11 0 3 100],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+rectangle('Position',[20 0 2 100],'EdgeColor',[1 1 1],'FaceColor',[1,0.8,1]);
+hold on;
+plot(x,combined(:,3).*100,'black','DisplayName','EV Battery SOC','LineWidth',2);
+hold on;
+line3 = refline([0 92]);
+line3.LineStyle = '-.';
+line3.Color = 'g';
+line3.DisplayName = 'Desired SOC';
+ylabel('SOC');
+ylim([0 100]);
+hold on;
+yyaxis right
+bar(x_r-0.1,forecast(1:24,3),'DisplayName','Uncontrollable Load');
+ylabel('SOC');
+ylim([0 20]);
+xlabel('Time(hr)');
+xlim([1 25]);
+legend('show');

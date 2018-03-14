@@ -1,8 +1,8 @@
 clear;
 GAMSPATH='C:\GAMS\win64\24.7';
 addpath(GAMSPATH); % add GAMS foler to search path
-HEMSPATH = 'D:\PSOC\LWang\GAMS_HEMS_test\HEMS.gms';
-IO_DIRECTORY=('D:\PSOC\LWang\GAMS_HEMS_test');
+HEMSPATH = 'HEMS.gms';
+
 
 EV = '1_Static\EV_PAR.csv';
 HVAC = '1_Static\HVAC_PAR.csv';
@@ -86,7 +86,7 @@ for i = 1:n_period
         error("GAMS ERROR");
     end
     %read result
-    outputGDX=[IO_DIRECTORY,filesep,'Results.gdx'];
+    outputGDX='Results.gdx';
     t_gdx.name = 't';
     t=rgdx(outputGDX,t_gdx);
     s_gdx.name ='s';

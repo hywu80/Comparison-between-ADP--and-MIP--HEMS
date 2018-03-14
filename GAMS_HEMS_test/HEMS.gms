@@ -1,11 +1,11 @@
 * static data
-$SETGLOBAL STATIC "D:\PSOC\LWang\GAMS_HEMS_test\1_Static\";
+$SETGLOBAL STATIC "D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\1_Static\";
 
 * gridlabd data
-$SETGLOBAL FROMGLD "D:\PSOC\LWang\GAMS_HEMS_test\2_from_GLD\";
+$SETGLOBAL FROMGLD "D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\2_from_GLD\";
 
 * time series data
-$SETGLOBAL FROMINPUTFILE "D:\PSOC\LWang\GAMS_HEMS_test\3_from_input_file\";
+$SETGLOBAL FROMINPUTFILE "D:\PSOC\LWang\Comparison-between-ADP--and-MIP--HEMS\GAMS_HEMS_test\3_from_input_file\";
 
 scalar M /10000/;
 scalar epsilon /0.01/;
