@@ -33,34 +33,34 @@ day = 2;
 hour = 0;
 
 for i = 1:n_period
-	medi = medi_store(i:i+time_slot-1,:);
-	price = price_store(:,i:i+time_slot-1);
+    medi = medi_store(i:i+time_slot-1,:);
+    price = price_store(:,i:i+time_slot-1);
     H_arrive_time = H_arrive_time - 1;
     H_departure_time = H_departure_time - 1;
     if H_departure_time == 0
         H_departure_time = 24;
     end
-	ad_time = [H_arrive_time,H_departure_time];
+    ad_time = [H_arrive_time,H_departure_time];
     
     %ADP
- 	[problem,result,time] = HEMS_Main(false,time_slot,pre_decision_adp(i,:),medi,price,ad_time,151,60,30);
+    [problem,result,time] = HEMS_Main(false,time_slot,pre_decision_adp_rounded(i,:),medi,price,ad_time,151,60,30);
     adp_firstD(i,:) = result.first_decision;
     
     %DP
     %To run DP, Comment above two lines and uncomment below two lines
-% 	[problem,result,time] = HEMS_Main(true,time_slot,pre_decision_adp_rounded(i,:),medi,price,ad_time);
-%     adp_firstD(i,:) = cell2mat(result.dpbi_policy(1));    
-
+%    [problem,result,time] = HEMS_Main(true,time_slot,pre_decision_adp_rounded(i,:),medi,price,ad_time);
+%    adp_firstD(i,:) = cell2mat(result.dpbi_policy(1));
+    
     s_range_mat = cell2mat(problem.params.appliance_range);
-	adp_time(1,i) = time;
-	post_decision_adp(i,:) = pre_decision_adp(i,:)+adp_firstD(i,:);
+    adp_time(1,i) = time;
+    post_decision_adp(i,:) = pre_decision_adp(i,:)+adp_firstD(i,:);
     pre_decision_adp(i+1,1) = 0.9*pre_decision_adp(i,1)+ 0.1*forecast(i,1)+adp_firstD(i,1);
-	pre_decision_adp_rounded(i+1,1) = min(round(pre_decision_adp(i+1,1),1),s_range_mat(1,2));
- end
+    pre_decision_adp_rounded(i+1,1) = min(round(pre_decision_adp(i+1,1),1),s_range_mat(1,2));
+end
 
 combined_adp = ones(n_period*2+1,3);
 for n = 1:n_period
-	combined_adp(2*n-1,:) = pre_decision_adp(n,:);
+    combined_adp(2*n-1,:) = pre_decision_adp(n,:);
     combined_adp(2*n,:) = post_decision_adp(n,:);
     x(2*n-1) = n;
     x(2*n) = n+0.2;
